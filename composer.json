@@ -1,0 +1,21 @@
+{
+    "name": "poriya/taskmanager",
+    "description": "A simple todo list project",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Poriya\\Taskmanager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "poriya",
+            "email": "poriya77armaghani@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "hekmatinasser/verta": "^8.4"
+    }
+}
