@@ -3,11 +3,17 @@
 include "bootstrap/init.php";
 
 
-
-if (!isLoggedIn()) {
-     header("Location:" . siteUrl("auth.php"));
+if (isset($_GET['logout'])) {
+     logout();
 }
 
+
+if (!isLoggedIn()) {
+
+     redirect(siteUrl("auth.php"));
+}
+
+$user  = getLoginUser();
 
 if (isset($_GET['delete_folder']) && is_numeric($_GET['delete_folder'])) {
      $deletedCount = deleteFolder($_GET['delete_folder']);

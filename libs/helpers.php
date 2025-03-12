@@ -16,6 +16,11 @@ function diePage($msg)
      die;
 }
 
+function message($msg, $cssClass = 'info')
+{
+     echo "<div class='$cssClass' style='padding: 30px; width: 70%; margin: 50px auto; background: #cf9d9d; border: 1px solid #580909; color: #501111; border-radius: 10px; font-family: sans-serif;'>$msg</div>";
+}
+
 function isAjaxRequest()
 {
 
@@ -38,5 +43,11 @@ function dd()
 
 function siteUrl($uri = '')
 {
-     return BASE_URL . "/".$uri ;
+     return BASE_URL . "/" . $uri;
+}
+
+function redirect($url)
+{
+     header("Location: $url");
+     die;
 }

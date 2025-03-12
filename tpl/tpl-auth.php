@@ -14,23 +14,23 @@
   <div class="container right-panel-active">
     <!-- Sign Up -->
     <div class="container__form container--signup">
-      <form action="#" class="form" id="form1">
-        <h2 class="form__title">Sign Up</h2>
-        <input type="text" placeholder="User" class="input" />
-        <input type="email" placeholder="Email" class="input" />
-        <input type="password" placeholder="Password" class="input" />
-        <button class="btn">Sign Up</button>
+      <form action="<?= siteUrl("auth.php?action=register") ?>" class="form" method="post" id="form1">
+        <h2 class="form__title">Register</h2>
+        <input type="text" placeholder="User" name="name" class="input" />
+        <input type="email" placeholder="Email" name="email" class="input" />
+        <input type="password" placeholder="Password" name="password" class="input" />
+        <button class="btn">Register</button>
       </form>
     </div>
 
     <!-- Sign In -->
     <div class="container__form container--signin">
-      <form action="#" class="form" id="form2">
+      <form action="<?= siteUrl("auth.php?action=login") ?>" method="post" class="form" id="form2">
         <h2 class="form__title">Sign In</h2>
-        <input type="email" placeholder="Email" class="input" />
-        <input type="password" placeholder="Password" class="input" />
-        <a href="#" class="link">Forgot your password?</a>
-        <button class="btn">Sign In</button>
+        <input type="email" placeholder="Email" name="email" class="input" />
+        <input type="password" placeholder="Password" name="password" class="input" />
+        <!-- <a href="#" class="link">Forgot your password?</a> -->
+        <button type="submit" class="btn">Sign In</button>
       </form>
     </div>
 
@@ -41,7 +41,7 @@
           <button class="btn" id="signIn">Sign In</button>
         </div>
         <div class="overlay__panel overlay--right">
-          <button class="btn" id="signUp">Sign Up</button>
+          <button class="btn" id="signUp">Register</button>
         </div>
       </div>
     </div>
@@ -50,8 +50,8 @@
   <script>
     const signInBtn = document.getElementById("signIn");
     const signUpBtn = document.getElementById("signUp");
-    const fistForm = document.getElementById("form1");
-    const secondForm = document.getElementById("form2");
+    // const fistForm = document.getElementById("form1");
+    // const secondForm = document.getElementById("form2");
     const container = document.querySelector(".container");
 
     signInBtn.addEventListener("click", () => {

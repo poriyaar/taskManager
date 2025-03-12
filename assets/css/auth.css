@@ -87,6 +87,12 @@ body {
   z-index: 5;
 }
 
+.success {
+  background: #def9df !important;
+  border: 1px solid #a4cca6 !important;
+  color: #205217 !important;
+}
+
 .container__overlay {
   height: 100%;
   left: 50%;
